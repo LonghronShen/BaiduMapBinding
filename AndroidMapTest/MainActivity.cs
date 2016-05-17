@@ -10,7 +10,7 @@ namespace BaiduMapTest
 
     [Activity(Label = "BaiduMapTest", MainLauncher = true)]
     public class MainActivity
-        : Activity
+         : Activity
     {
 
         BMapManager mapManager;
@@ -30,18 +30,18 @@ namespace BaiduMapTest
 
             mapView = FindViewById<MapView>(Resource.Id.mapview);
             mapView.ShowZoomControls(true);
-            mapView.Satellite = true;
+            //mapView.Satellite = true;
 
-            var mapController = mapView.Controller;
-            var point = new GeoPoint((int)(39.915 * 1E6), (int)(116.404 * 1E6));
-            mapController.SetCenter(point);
-            mapController.SetZoom(12);
+            //var mapController = mapView.Controller;
+            //var point = new GeoPoint((int)(39.915 * 1E6), (int)(116.404 * 1E6));
+            //mapController.SetCenter(point);
+            //mapController.SetZoom(12);
             addGroundOverlay();
         }
 
         private void addGroundOverlay()
         {
-            GroundOverlay overlay = new GroundOverlay(mapView);
+            GroundOverlay overlay = new GroundOverlay(); // mapView);
             GeoPoint leftBottom = new GeoPoint((int)(39.815 * 1E6), (int)(116.304 * 1E6));
             GeoPoint rightUp = new GeoPoint((int)(39.999 * 1E6), (int)(116.504 * 1E6));
             Drawable d = Resources.GetDrawable(Resource.Drawable.Icon);
