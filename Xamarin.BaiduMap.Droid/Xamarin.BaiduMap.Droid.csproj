@@ -44,10 +44,7 @@
     <None Include="Additions\AboutAdditions.txt" />
     <None Include="Jars\AboutJars.txt" />
     <None Include="Libs\arm64-v8a\libBaiduMapSDK_base_v3_7_3.so" />
-    <None Include="Libs\arm64-v8a\libBaiduMapSDK_cloud_v3_7_3.so" />
     <None Include="Libs\arm64-v8a\libBaiduMapSDK_map_v3_7_3.so" />
-    <None Include="Libs\arm64-v8a\libBaiduMapSDK_radar_v3_7_3.so" />
-    <None Include="Libs\arm64-v8a\libBaiduMapSDK_search_v3_7_3.so" />
     <None Include="Libs\arm64-v8a\libBaiduMapSDK_util_v3_7_3.so" />
     <None Include="Libs\arm64-v8a\liblocSDK6a.so" />
     <None Include="Libs\armeabi-v7a\libBaiduMapSDK_base_v3_7_3.so" />
