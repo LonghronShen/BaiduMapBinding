@@ -22,6 +22,8 @@
   <attr path="/api/package[@name='com.baidu.platform.comapi.map']/class[@name='A']" name="managedName">TransitOverlay</attr>
   <attr path="/api/package[@name='com.baidu.platform.comapi.map']/class[@name='A']" name="extends">java.lang.Object</attr>
 
+  <attr path="/api/package[@name='com.baidu.platform.comapi.map']/class[@name='B']" name="managedName">BB</attr>
+
   <attr path="/api/package[@name='com.baidu.mapapi.utils']/class[@name='PermissionCheck.a']" name="obfuscated">false</attr>
   <attr path="/api/package[@name='com.baidu.mapapi.utils']/class[@name='PermissionCheck.a']" name="managedName">PermissionCheckResult</attr>
   <attr path="/api/package[@name='com.baidu.mapapi.utils']/class[@name='PermissionCheck.a']/field[@name='a']" name="obfuscated">false</attr>
@@ -40,5 +42,7 @@
   
   <!--<attr path="/api/package[@name='com.baidu.mapapi.map']/class[@name='MapView']/method[@name='getZoomControls']" name="deprecated"></attr>-->
   <!--<attr path="/api/package[@name='Com.Baidu.Mapapi']/class[@name='VersionInfo']/method[@name='clone']" name="visibility">protected</attr>-->
+
+  <attr path="/api/package[@name='com.baidu.location']/class[@name='Address']" name="managedName">AddressItem</attr>
 </metadata>
   

@@ -67,10 +67,4 @@
     <AndroidResource Include="Resources\drawable\Icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
-  <ItemGroup>
-    <ProjectReference Include="..\AndroidBinding\AndroidBinding.csproj">
-      <Project>{274A356F-B7F9-4E50-AA69-627EF73BBD39}</Project>
-      <Name>AndroidBinding</Name>
-    </ProjectReference>
-  </ItemGroup>
 </Project>

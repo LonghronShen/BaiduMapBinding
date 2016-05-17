@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{404463E1-76F2-4B69-BD7A-2B152F52A4C1}</ProjectGuid>
+    <ProjectTypeGuids>{10368E6C-D01B-4462-8E8B-01FC667A7035};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Xamarin.BaiduMap.Droid</RootNamespace>
+    <AssemblyName>Xamarin.BaiduMap.Droid</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <AndroidUseLatestPlatformSdk>False</AndroidUseLatestPlatformSdk>
+    <TargetFrameworkVersion>v6.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Mono.Android" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Additions\AboutAdditions.txt" />
+    <None Include="Jars\AboutJars.txt" />
+    <None Include="Libs\arm64-v8a\libBaiduMapSDK_base_v3_7_3.so" />
+    <None Include="Libs\arm64-v8a\libBaiduMapSDK_cloud_v3_7_3.so" />
+    <None Include="Libs\arm64-v8a\libBaiduMapSDK_map_v3_7_3.so" />
+    <None Include="Libs\arm64-v8a\libBaiduMapSDK_radar_v3_7_3.so" />
+    <None Include="Libs\arm64-v8a\libBaiduMapSDK_search_v3_7_3.so" />
+    <None Include="Libs\arm64-v8a\libBaiduMapSDK_util_v3_7_3.so" />
+    <None Include="Libs\arm64-v8a\liblocSDK6a.so" />
+    <None Include="Libs\armeabi-v7a\libBaiduMapSDK_base_v3_7_3.so" />
+    <None Include="Libs\armeabi-v7a\libBaiduMapSDK_map_v3_7_3.so" />
+    <None Include="Libs\armeabi-v7a\libBaiduMapSDK_util_v3_7_3.so" />
+    <None Include="Libs\armeabi-v7a\liblocSDK6a.so" />
+    <None Include="Libs\armeabi\libBaiduMapSDK_base_v3_7_3.so" />
+    <None Include="Libs\armeabi\libBaiduMapSDK_map_v3_7_3.so" />
+    <None Include="Libs\armeabi\libBaiduMapSDK_util_v3_7_3.so" />
+    <None Include="Libs\armeabi\liblocSDK6a.so" />
+    <None Include="Libs\x86\libBaiduMapSDK_base_v3_7_3.so" />
+    <None Include="Libs\x86\libBaiduMapSDK_map_v3_7_3.so" />
+    <None Include="Libs\x86\libBaiduMapSDK_util_v3_7_3.so" />
+    <None Include="Libs\x86\liblocSDK6a.so" />
+    <None Include="Libs\x86_64\libBaiduMapSDK_base_v3_7_3.so" />
+    <None Include="Libs\x86_64\libBaiduMapSDK_map_v3_7_3.so" />
+    <None Include="Libs\x86_64\libBaiduMapSDK_radar_v3_7_3.so" />
+    <None Include="Libs\x86_64\liblocSDK6a.so" />
+  </ItemGroup>
+  <ItemGroup>
+    <TransformFile Include="Transforms\Metadata.xml">
+      <SubType>Designer</SubType>
+    </TransformFile>
+    <TransformFile Include="Transforms\EnumFields.xml" />
+    <TransformFile Include="Transforms\EnumMethods.xml" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <InputJar Include="Jars\baidumapapi_base_v3_7_3.jar" />
+  </ItemGroup>
+  <ItemGroup>
+    <InputJar Include="Jars\baidumapapi_map_v3_7_3.jar" />
+  </ItemGroup>
+  <ItemGroup>
+    <InputJar Include="Jars\baidumapapi_util_v3_7_3.jar" />
+  </ItemGroup>
+  <ItemGroup>
+    <InputJar Include="Jars\locSDK_6.13.jar" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
