@@ -20,15 +20,16 @@ namespace BaiduMapTest
         {
             this.SetTheme(Android.Resource.Style.ThemeHolo);
             base.OnCreate(savedInstanceState);
+			SDKInitializer.Initialize(ApplicationContext);
 
-            mapManager = new BMapManager();
-            BMapManager.Init();
+			//mapManager = new BMapManager();
+   //         BMapManager.Init();
             //mapManager.Init(GetString(Resource.String.baidu_map_api_key), null);
 
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
 
-            mapView = FindViewById<MapView>(Resource.Id.mapview);
+            mapView = FindViewById<MapView>(Resource.Id.bmapView);
             mapView.ShowZoomControls(true);
             //mapView.Satellite = true;
 
@@ -36,50 +37,50 @@ namespace BaiduMapTest
             //var point = new GeoPoint((int)(39.915 * 1E6), (int)(116.404 * 1E6));
             //mapController.SetCenter(point);
             //mapController.SetZoom(12);
-            addGroundOverlay();
+            //addGroundOverlay();
         }
 
         private void addGroundOverlay()
         {
-            GroundOverlay overlay = new GroundOverlay(); // mapView);
-            GeoPoint leftBottom = new GeoPoint((int)(39.815 * 1E6), (int)(116.304 * 1E6));
-            GeoPoint rightUp = new GeoPoint((int)(39.999 * 1E6), (int)(116.504 * 1E6));
-            Drawable d = Resources.GetDrawable(Resource.Drawable.Icon);
-            Bitmap bitmap = ((BitmapDrawable)d).Bitmap;
-            Ground ground = new Ground(bitmap, leftBottom, rightUp);
+            //GroundOverlay overlay = new GroundOverlay(); // mapView);
+            //GeoPoint leftBottom = new GeoPoint((int)(39.815 * 1E6), (int)(116.304 * 1E6));
+            //GeoPoint rightUp = new GeoPoint((int)(39.999 * 1E6), (int)(116.504 * 1E6));
+            //Drawable d = Resources.GetDrawable(Resource.Drawable.Icon);
+            //Bitmap bitmap = ((BitmapDrawable)d).Bitmap;
+            //Ground ground = new Ground(bitmap, leftBottom, rightUp);
 
-            mapView.Overlays.Add(overlay);
-            overlay.AddGround(ground);
+            //mapView.Overlays.Add(overlay);
+            //overlay.AddGround(ground);
         }
 
         protected override void OnDestroy()
         {
-            mapView.Destroy();
-            if (mapManager != null)
-            {
-                mapManager.Destroy();
-                mapManager = null;
-            }
+            //mapView.Destroy();
+            //if (mapManager != null)
+            //{
+            //    mapManager.Destroy();
+            //    mapManager = null;
+            //}
             base.OnDestroy();
         }
 
         protected override void OnPause()
         {
-            mapView.OnPause();
-            if (mapManager != null)
-            {
-                mapManager.Stop();
-            }
+            //mapView.OnPause();
+            //if (mapManager != null)
+            //{
+            //    mapManager.Stop();
+            //}
             base.OnPause();
         }
 
         protected override void OnResume()
         {
-            mapView.OnResume();
-            if (mapManager != null)
-            {
-                mapManager.Start();
-            }
+            //mapView.OnResume();
+            //if (mapManager != null)
+            //{
+            //    mapManager.Start();
+            //}
             base.OnResume();
         }
     }
