@@ -13,8 +13,11 @@ namespace BaiduMapTest
          : Activity
     {
 
-        BMapManager mapManager;
-        MapView mapView;
+        private BMapManager mapManager;
+        //private MapView mapView;
+
+        //private LocationClient mLocationClient = null;
+        //private BDLocationListener myListener = new MyLocationListener();
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -22,15 +25,18 @@ namespace BaiduMapTest
             base.OnCreate(savedInstanceState);
 			SDKInitializer.Initialize(ApplicationContext);
 
-			//mapManager = new BMapManager();
-   //         BMapManager.Init();
+            //mLocationClient = new LocationClient(ApplicationContext);     //ÉùÃ÷LocationClientÀà
+            //mLocationClient.registerLocationListener(myListener);    //×¢²á¼àÌýº¯Êý
+
+            //mapManager = new BMapManager();
+            //         BMapManager.Init();
             //mapManager.Init(GetString(Resource.String.baidu_map_api_key), null);
 
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
 
-            mapView = FindViewById<MapView>(Resource.Id.bmapView);
-            mapView.ShowZoomControls(true);
+            //mapView = FindViewById<MapView>(Resource.Id.bmapView);
+            //mapView.ShowZoomControls(true);
             //mapView.Satellite = true;
 
             //var mapController = mapView.Controller;
@@ -84,6 +90,7 @@ namespace BaiduMapTest
             base.OnResume();
         }
     }
+
+
+
 }
-
-

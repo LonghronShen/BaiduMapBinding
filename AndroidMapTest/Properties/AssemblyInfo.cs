@@ -20,4 +20,4 @@ using Android.App;
 // if desired. See the Mono documentation for more information about signing.
 //[assembly: AssemblyDelaySign(false)]
 //[assembly: AssemblyKeyFile("")]
-[assembly: MetaData("com.baidu.lbsapi.API_KEY", Value = "")]
+[assembly: MetaData("com.baidu.lbsapi.API_KEY", Value = "c81o018nHmNp2BHDp5K1pmiR7r8P79ii")]
